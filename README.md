@@ -36,8 +36,11 @@ console.log(generateUrl(params));
 
 // Output: "http://testurl.bitfinx.com/?height=300&interval=3h&locale=en&pair=BTC_USD&width=360"
 
+```
 
 ## Challenge 3: Imporoving the code of the function:
+
+```javascript
 // var volumeSetup = function () {
 //     // setup volume unit interface
 //     var volumeUnit = window.APP.util.getSettings('ticker_vol_unit').toUpperCase();
@@ -78,17 +81,20 @@ const volumeSetup = () => {
   return window.APP.util.initCurrenciesList();
 };
 
-// 1.	Use of const and let:
-// •	Change: Replaced var with const for variables that are not reassigned.
-// •	Benefit: const and let provide block scope, reducing potential errors due to variable hoisting and reassignment.
-// 2.	Map Object for Selector Lookup:
-// •	Change: Created a volumeUnitsMap object to map volumeUnit values to their corresponding selectors.
-// •	Benefit: This simplifies the lookup process, making the code more readable and easier to maintain. Adding or removing volume units now requires only changes in one place.
-// 3.	Simplified Element Selection:
-// •	Change: Replaced the multiple if statements with a single lookup in the volumeUnitsMap.
-// •	Benefit: Reduces code redundancy and improves performance by avoiding multiple conditional checks.
-// 4.	Consistent Function Return:
-// •	Change: Directly returned the result of window.APP.util.initCurrenciesList().
-// •	Benefit: Ensures the function’s purpose is clear and its return value is consistent and predictable.
+```
+
+ 1.	Use of const and let:
+   •	Change: Replaced var with const for variables that are not reassigned.
+   •	Benefit: const and let provide block scope, reducing potential errors due to variable hoisting and reassignment.
+ 2.	Map Object for Selector Lookup:
+   •	Change: Created a volumeUnitsMap object to map volumeUnit values to their corresponding selectors.
+   •	Benefit: This simplifies the lookup process, making the code more readable and easier to maintain. Adding or removing volume units now requires only changes in one place.
+ 3.	Simplified Element Selection:
+   •	Change: Replaced the multiple if statements with a single lookup in the volumeUnitsMap.
+   •	Benefit: Reduces code redundancy and improves performance by avoiding multiple conditional checks.
+ 4.	Consistent Function Return:
+   •	Change: Directly returned the result of window.APP.util.initCurrenciesList().
+   •	Benefit: Ensures the function’s purpose is clear and its return value is consistent and predictable.
+
 
 
